@@ -1,6 +1,7 @@
 from flask import Flask, request, make_response
 
 app = Flask(__name__, template_folder="templates")
+sayWhat = "hi, accessing var above"
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -28,4 +29,9 @@ def login():
 @app.route("/about")
 def about_page():
     return "<p> this is the about page!</p>"
+
+if __name__=='__main__':
+    print (sayWhat)
+    print ()
+
 
